@@ -10,7 +10,6 @@ vim.api.nvim_create_autocmd('User', {
     end
 })
 
-
 function get_config_path()
     local cfg_path = vim.fn.stdpath("config")
     if type(cfg_path) == "table" then
