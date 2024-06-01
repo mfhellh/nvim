@@ -6,7 +6,7 @@ vim.api.nvim_create_autocmd('User', {
 
         vim.system({ "git", "add", "." }, { cwd = cfg_path }):wait()
         vim.system({ "git", "commit", "-m", commit_msg }, { cwd = cfg_path }):wait()
-        vim.system({ "git", "push" }, { cwd = cfg_path }):wait()
+        vim.system({ "git", "push", "origin" }, { cwd = cfg_path }):wait()
     end
 })
 
