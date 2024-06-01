@@ -4,9 +4,9 @@ vim.api.nvim_create_autocmd('User', {
         local cfg_path = get_config_path()
         local commit_msg = "\"automatic-" .. get_timestamp() .. "\""
 
-        vim.system({ "git", "add", "." }, { cwd = cfg_path })
-        vim.system({ "git", "commit", "-m", commit_msg }, { cwd = cfg_path })
-        vim.system({ "git", "push" }, { cwd = cfg_path })
+        vim.system({ "git", "add", "." }, { cwd = cfg_path }):wait()
+        vim.system({ "git", "commit", "-m", commit_msg }, { cwd = cfg_path }):wait()
+        vim.system({ "git", "push" }, { cwd = cfg_path }):wait()
     end
 })
 
