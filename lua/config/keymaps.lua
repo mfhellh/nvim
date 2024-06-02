@@ -1,8 +1,10 @@
---)LazyVim keymaps in https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
+--LazyVim keymaps in https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 --
 --
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Lazy" })
+vim.keymap.set("n", "<leader>w", "<cmd>write<cr>", { desc = "Save" })
+vim.keymap.set("n", "<leader>W", "<cmd>wall<cr>", { desc = "Save all" })
 
 -- Treesitter
 local builtin = require("telescope.builtin")
