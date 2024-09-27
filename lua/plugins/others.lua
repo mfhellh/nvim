@@ -78,5 +78,11 @@ return {
     },
     { 'tpope/vim-dispatch' },
     { 'clojure-vim/vim-jack-in' },
-    { 'radenling/vim-dispatch-neovim' }
+    { 'radenling/vim-dispatch-neovim' },
+    {
+        'tpope/vim-eunuch',
+        config = function()
+            vim.cmd('cnoreabbrev rename Rename')
+        end,
+    }
 }
