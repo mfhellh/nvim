@@ -57,7 +57,24 @@ return {
             "nvim-lua/plenary.nvim",
             "antoinemadec/FixCursorHold.nvim",
             "nvim-treesitter/nvim-treesitter"
-        }
+        },
+        requires = {
+            'nvim-neotest/neotest-jest'
+        },
+        config = function()
+            require('neotest').setup({
+                adapters = {
+                    require('neotest-jest')({
+                        jestCommand = "pnpm exec nx run current-modulee:test",
+                        jestConfigFile = "custom.jest.config.ts",
+                        env = { CI = true },
+                        cwd = function(path)
+                            return vim.fn.getcwd()
+                        end,
+                    }),
+                }
+            })
+        end
     },
     { 'HiPhish/rainbow-delimiters.nvim' }
     --  { "Olical/conjure" }
