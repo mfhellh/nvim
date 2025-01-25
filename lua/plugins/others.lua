@@ -50,6 +50,15 @@ return {
         }
     },
     { 'lewis6991/gitsigns.nvim' },
+    {
+        "nvim-neotest/neotest",
+        dependencies = {
+            "nvim-neotest/nvim-nio",
+            "nvim-lua/plenary.nvim",
+            "antoinemadec/FixCursorHold.nvim",
+            "nvim-treesitter/nvim-treesitter"
+        }
+    },
     { 'HiPhish/rainbow-delimiters.nvim' }
     --  { "Olical/conjure" }
     -- {
