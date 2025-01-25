@@ -22,7 +22,6 @@ lsp.ensure_installed({
     --'eslint',
     'rust_analyzer',
     --'clojure_lsp'
-
 })
 
 lsp.setup()
