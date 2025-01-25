@@ -52,7 +52,7 @@ return {
     },
     { 'HiPhish/rainbow-delimiters.nvim' }
     --  { "Olical/conjure" }
-    --{
+    -- {
     --    "Olical/conjure",
     --    ft = { "clojure" }, -- etc
     --    lazy = true,
