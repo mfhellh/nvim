@@ -20,7 +20,7 @@ return {
             local configs = require("nvim-treesitter.configs")
 
             configs.setup({
-                ensure_installed = { "clojure", "lua", "vim", "vimdoc", "query", "typescript", "javascript", "html" },
+                ensure_installed = { "lua", "vim", "vimdoc", "query", "typescript", "javascript", "html" },
                 sync_install = true,
                 highlight = {
                     enable = true,
@@ -50,39 +50,39 @@ return {
             { 'L3MON4D3/LuaSnip' },     -- Required
         }
     },
-    { 'HiPhish/rainbow-delimiters.nvim' },
+    { 'HiPhish/rainbow-delimiters.nvim' }
     --  { "Olical/conjure" }
-    {
-        "Olical/conjure",
-        ft = { "clojure" }, -- etc
-        lazy = true,
-        init = function()
-            -- Set configuration options here
-            -- Uncomment this to get verbose logging to help diagnose internal Conjure issues
-            -- This is VERY helpful when reporting an issue with the project
-            -- vim.g["conjure#debug"] = true
-        end,
+    --{
+    --    "Olical/conjure",
+    --    ft = { "clojure" }, -- etc
+    --    lazy = true,
+    --    init = function()
+    --        -- Set configuration options here
+    --        -- Uncomment this to get verbose logging to help diagnose internal Conjure issues
+    --        -- This is VERY helpful when reporting an issue with the project
+    --        -- vim.g["conjure#debug"] = true
+    --    end,
 
-        -- Optional cmp-conjure integration
-        dependencies = { "PaterJason/cmp-conjure" },
-    },
-    {
-        "PaterJason/cmp-conjure",
-        lazy = true,
-        config = function()
-            local cmp = require("cmp")
-            local config = cmp.get_config()
-            table.insert(config.sources, { name = "conjure" })
-            return cmp.setup(config)
-        end,
-    },
-    { 'tpope/vim-dispatch' },
-    { 'clojure-vim/vim-jack-in' },
-    { 'radenling/vim-dispatch-neovim' },
-    {
-        'tpope/vim-eunuch',
-        config = function()
-            vim.cmd('cnoreabbrev rename Rename')
-        end,
-    }
+    --    -- Optional cmp-conjure integration
+    --    dependencies = { "PaterJason/cmp-conjure" },
+    --},
+    --{
+    --    "PaterJason/cmp-conjure",
+    --    lazy = true,
+    --    config = function()
+    --        local cmp = require("cmp")
+    --        local config = cmp.get_config()
+    --        table.insert(config.sources, { name = "conjure" })
+    --        return cmp.setup(config)
+    --    end,
+    --},
+    --{ 'tpope/vim-dispatch' },
+    --{ 'clojure-vim/vim-jack-in' },
+    --{ 'radenling/vim-dispatch-neovim' },
+    --{
+    --    'tpope/vim-eunuch',
+    --    config = function()
+    --        vim.cmd('cnoreabbrev rename Rename')
+    --    end,
+    --}
 }

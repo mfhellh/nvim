@@ -20,8 +20,8 @@ lsp.ensure_installed({
     -- Replace these with whatever servers you want to install
     --'tsserver',
     --'eslint',
-    -- 'rust_analyzer',
-    'clojure_lsp'
+    'rust_analyzer',
+    --'clojure_lsp'
 
 })
 
