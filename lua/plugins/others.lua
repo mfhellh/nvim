@@ -66,7 +66,7 @@ return {
             require('neotest').setup({
                 adapters = {
                     require('neotest-jest')({
-                        jestCommand = "pnpm exec nx run current-modulee:test",
+                        jestCommand = "pnpm exec nx run payroll-view-personio-people-onboarding:test",
                         jestConfigFile = "custom.jest.config.ts",
                         env = { CI = true },
                         cwd = function(path)
