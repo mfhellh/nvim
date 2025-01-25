@@ -18,8 +18,8 @@ require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
 lsp.ensure_installed({
     -- Replace these with whatever servers you want to install
-    'tsserver',
-    --'eslint',
+    'ts_ls',
+    'eslint',
     'rust_analyzer',
     --'clojure_lsp'
 })
