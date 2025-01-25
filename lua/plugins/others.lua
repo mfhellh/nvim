@@ -49,7 +49,7 @@ return {
             { 'L3MON4D3/LuaSnip' },     -- Required
         }
     },
-    { 'lewis6991/gitsigns' },
+    { 'lewis6991/gitsigns.nvim' },
     { 'HiPhish/rainbow-delimiters.nvim' }
     --  { "Olical/conjure" }
     -- {
