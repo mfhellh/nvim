@@ -19,7 +19,7 @@ return {
             local configs = require("nvim-treesitter.configs")
 
             configs.setup({
-                ensure_installed = { "lua", "vim", "vimdoc", "query", "typescript", "javascript", "html" },
+                ensure_installed = { "lua", "vim", "vimdoc", "query", "typescript", "javascript", "tsx", "html" },
                 sync_install = true,
                 highlight = {
                     enable = true,
@@ -65,8 +65,6 @@ return {
         config = function()
             require('neotest').setup({
                 adapters = {
-                    require("neotest-plenary"),
-
                     require('neotest-jest')({
                         jestCommand = "pnpm exec nx run payroll-view-personio-people-onboarding:test",
                         jestConfigFile = "custom.jest.config.ts",
